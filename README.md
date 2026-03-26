@@ -1,9 +1,17 @@
-# causal-analysis-democracy-womens-rights
-A Causal Inference analysis of the relationship between the level of democracy in a country and the women's right impact
+# A Causal Analysis of the Relationship between Democracies, Civil Liberties, and Women's Rights under the Law
+
+This project does a historical analysis of the variation in the level of democracy, political freedom, and civil liberties in a country and how these impact on the women's equality defined by the legal framework of such states.
+
+___
+
+## Sources
+
 
 ---
 
-## Main Dataset: `processed-datasets/merged/democracy_wbl_rdi.csv`
+## Main Dataset: Polity5, V-Dem, WBL, RDI
+
+File: `processed-datasets/merged/democracy_wbl_rdi.csv`
 
 **8,561 rows × 101 columns** — 174 countries, years 1971–2018.
 

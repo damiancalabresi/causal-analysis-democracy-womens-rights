@@ -1,0 +1,6 @@
+.DS_Store
+.ipynb_checkpoints/
+datasets/pew-research-center/Religious_Composition_by_Country_2010-2050.xlsx
+datasets/polity/p5v2018.xls
+datasets/v-dem/V-Dem-CY-Core-v16.csv
+datasets/wbl/WBL2024-1-0-Historical-Panel-Data.xlsx
