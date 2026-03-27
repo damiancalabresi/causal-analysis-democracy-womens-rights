@@ -1,27 +1,64 @@
 # A Causal Analysis of the Relationship between Democracies, Civil Liberties, and Women's Rights under the Law
 
-This project does a historical analysis of the variation in the level of democracy, political freedom, and civil liberties in a country and how these impact on the women's equality defined by the legal framework of such states.
+## About
 
-___
+This project uses historical panel data to investigate whether changes in a country's level of democracy and civil liberties causally precede improvements in women's legal rights, or whether the relationship runs in the opposite direction — or both.
+
+The primary analytical tool is Granger causality testing applied country-by-country across a 48-year panel (1971–2018, 174 countries). Democracy and civil liberties variables from Polity5 and V-Dem are tested as predictors of women's legal rights from the World Bank's Women, Business and the Law (WBL) dataset, and the reverse direction is tested as well. The asymmetry between the two directions provides evidence about the likely causal ordering.
+
+This project is motivated in part by Behr et al. (2024), *Empowering Change* (World Bank Policy Research Working Paper 10788), which establishes correlational evidence that democracy and civil society are associated with legal gender equality but explicitly stops short of causal claims. See [`references/`](references/README.md).
+
+---
 
 ## Sources
 
+| Dataset | Coverage | Use in this project |
+|---------|----------|---------------------|
+| [Polity5](datasets/README.md#political-regime-characteristics-and-transitions-18002018) | 195 polities, 1776–2018 | Democracy/autocracy scores (treatment) |
+| [V-Dem v16](datasets/README.md#v-dem-dataset) | 202 polities, 1789–2025 | Fine-grained democracy, civil liberties, and women's empowerment indices |
+| [World Bank WBL](datasets/README.md#women-business-and-the-law-10-data-for-19712024) | 190 economies, 1971–2024 | Legal rights for women across 8 areas (outcome) |
+| [Pew Research Center RDI](datasets/README.md#religious-composition-by-country-2010-2050) | 230 countries, 2010 snapshot | Religious composition and fractionalization (control) |
+
+Raw datasets and their full documentation: [`datasets/`](datasets/README.md)
+
+Processed/cleaned versions: [`processed-datasets/`](processed-datasets/)
 
 ---
 
-## Main Dataset: Polity5, V-Dem, WBL, RDI
+## Integrated Democracy–Women's Rights Panel
 
-File: `processed-datasets/merged/democracy_wbl_rdi.csv`
+**File:** `processed-datasets/merged/democracy_wbl_rdi.csv`
 
 **8,561 rows × 101 columns** — 174 countries, years 1971–2018.
 
-Merges three sources:
-- **Polity5** — regime type and authority characteristics
-- **V-Dem** (Varieties of Democracy) — fine-grained democracy indices, including gender-specific measures
-- **World Bank Women, Business and the Law (WBL)** — legal rights indicators for women
-- **Pew Research Center Religious Diversity Index** — religious composition and dominant religion per country
+This is the main analytical dataset, produced by merging Polity5, V-Dem, WBL, and the Pew RDI into a single country-year panel. The merge key is `curr_iso3` — the ISO 3166-1 alpha-3 code of the current (or principal successor) state.
 
----
+### Country Continuity: Handling Dissolutions, Unifications, and Secessions
+
+ISO 3166-1 only assigns codes to currently existing countries, while Polity5 and V-Dem track historical and now-defunct polities. To produce a consistent panel, historical entities were mapped to a current ISO3 as follows:
+
+**Unifications** — both predecessor series are extended into the unified successor:
+
+| Predecessors | Unified state | Year |
+|---|---|---|
+| Germany East + Germany West | Germany (DEU) | 1990 |
+| Vietnam North + South Vietnam | Vietnam (VNM) | 1976 |
+| Yemen North + Yemen South | Yemen (YEM) | 1990 |
+
+**Dissolutions** — mapped to the principal successor state:
+
+| Historical polity | Mapped to | Other successors (tracked separately) |
+|---|---|---|
+| USSR | Russia (RUS) | 14 independent republics |
+| Yugoslavia | Serbia (SRB) | Slovenia, Croatia, Bosnia, Macedonia, Montenegro |
+| Czechoslovakia | Czech Republic (CZE) | Slovakia (SVK) |
+| Serbia and Montenegro | Serbia (SRB) | Montenegro (MNE) |
+
+**Secessions and new states** — tracked from independence under their own ISO3:
+
+Bosnia (BIH), Macedonia (MKD), Timor-Leste (TLS), Sudan-North (SDN), and others.
+
+As a result, a time series for (for example) Serbia covers Yugoslavia's pre-dissolution observations and Serbia's post-independence observations as a single continuous series under `curr_iso3 = SRB`.
 
 ### Identifiers
 
@@ -29,9 +66,9 @@ Merges three sources:
 |---|---|---|
 | `ts_id` | Unique time-series ID in format `{ccode}_{ISO3}` | string |
 | `orig_ccode` | Original Polity5 numeric country code | 2–950 |
-| `orig_country` | Country name as it appears in the original Polity5 dataset (may differ for historical entities) | string |
+| `orig_country` | Country name as it appears in the original Polity5 dataset | string |
 | `country` | Canonical country name | string |
-| `curr_iso3` | Current ISO 3166-1 alpha-3 country code (used as the merge key) | 174 unique codes |
+| `curr_iso3` | Current ISO 3166-1 alpha-3 country code (merge key) | 174 unique codes |
 | `curr_country` | Current country name matching `curr_iso3` | string |
 | `year` | Year of observation | 1971–2018 |
 
@@ -226,3 +263,53 @@ From the [Pew Research Center Global Religious Diversity](https://www.pewresearc
 |---|---|---|
 | `rdi` | Religious Diversity Index — higher values indicate greater diversity in religious composition | 0–9 (theoretical max: 10; observed max in dataset: 9) |
 | `dominant_religion` | The largest religious group in the country | `christian`, `muslim`, `unaffiliated`, `hindu`, `buddhist`, `folk`, `jewish` |
+
+---
+
+## Results: Granger Causality
+
+### Methodology
+
+Granger causality tests were run country-by-country using `statsmodels.tsa.stattools.grangercausalitytests`. Both series are **first-differenced** before testing to address the non-stationarity common to trending panel indices. Lags 1–4 years are tested; each country-pair's result is summarized by the minimum p-value across lags. Country-pairs with fewer than 20 usable observations are excluded.
+
+Results are aggregated across countries in two ways: the **% of countries** where the test is significant at p < 0.05 (share of countries showing the pattern), and **Fisher's combined p-value** (pooled evidence across all countries).
+
+Six democracy/civil liberties predictors are tested against nine WBL outcomes (8 sub-indices + overall WBL index), in both directions.
+
+### Forward Direction: Democracy / Civil Liberties → Women's Legal Rights
+
+Democracy and civil liberties variables consistently Granger-cause future changes in women's legal rights. The table below shows, for each WBL outcome, the mean % of countries significant across all 6 predictors and the single predictor with the strongest signal.
+
+| WBL Target | Mean % sig | Max % sig | Strongest predictor |
+|---|---|---|---|
+| Pension | 29.6% | 34.3% | Liberal Democracy |
+| Parenthood | 29.1% | 35.8% | Liberal Democracy |
+| Mobility | 25.9% | 28.6% | Freedom of Association |
+| WBL Index | 20.1% | 23.5% | Electoral Democracy |
+| Pay | 20.0% | 30.3% | Electoral Democracy |
+| Assets | 19.2% | 23.9% | Rule of Law |
+| Workplace | 17.3% | 20.3% | Polity2 |
+| Entrepreneurship | 16.7% | 21.2% | Rule of Law |
+| Marriage | 15.2% | 18.0% | Polity2 |
+
+The strongest forward signals are for **Pension** and **Parenthood** (liberal democracy as the best predictor), followed by **Mobility** (freedom of association). **Marriage** is the least Granger-caused by democracy indicators, possibly reflecting stronger influence of social and religious norms in that domain.
+
+### Reverse Direction: Women's Legal Rights → Democracy / Civil Liberties
+
+The same tests were run in reverse — testing whether past changes in WBL sub-indices predict future changes in democracy or civil liberties.
+
+| WBL Predictor | Mean % sig | Max % sig | Strongest democracy target |
+|---|---|---|---|
+| Parenthood | 17.1% | 19.8% | Polity2 |
+| Mobility | 17.0% | 21.7% | Polity2 |
+| Assets | 17.0% | 21.9% | Liberal Democracy |
+| Pension | 15.7% | 17.8% | Freedom of Expression |
+| Pay | 15.7% | 19.3% | Electoral Democracy |
+| Entrepreneurship | 15.1% | 19.5% | Freedom of Association |
+| WBL Index | 13.8% | 16.1% | Liberal Democracy |
+| Marriage | 11.5% | 15.2% | Freedom of Expression |
+| Workplace | 9.8% | 13.2% | Polity2 |
+
+The reverse signals are **consistently weaker** than the forward direction. Across all WBL sub-indices, the mean % of countries significant in the reverse direction ranges from 9.8% to 17.1%, compared to 15.2%–29.6% in the forward direction. This asymmetry supports the interpretation that democracy and civil liberties changes tend to **precede** improvements in women's legal rights, rather than the reverse.
+
+The aggregate WBL index shows a mean of 13.8% reverse significance vs. 20.1% forward — a roughly 1.5× gap. Individual sub-indices follow the same pattern, with **Workplace** being the area of most extreme asymmetry (9.8% reverse vs. 17.3% forward).
