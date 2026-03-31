@@ -10,6 +10,16 @@ This project is motivated in part by Behr et al. (2024), *Empowering Change* (Wo
 
 ---
 
+## Abstract
+
+This study applies data science and causal analysis methods to understand if improvements in democracy and civil liberties drive women's legal rights, or the relationship runs the other way. By bringing together computational methods and social science theory, this work exemplifies the kind of interdisciplinary collaboration between social and computational science.
+
+Using panel data from 174 countries over 48 years (1971–2018), we combine Granger causality testing and Panel Fixed Effects regression to assess the direction and strength of this relationship while controlling for stable country characteristics such as legal tradition and colonial history. The analysis integrates four large international datasets that cover democracy, civil participation, legal gender equality, and religious composition.
+
+Results show that democracy and civil liberties changes precede improvements in women's legal rights significantly. Women's parliamentary representation becomes the strongest predictor, with a special impact on marriage law and parenthood rights. The pattern holds across regions and religious contexts. Analysis shows that not only democracy is important, also freedom of association and the participation of civil society organizations contributes to the increase in women's rights legal adoption.
+
+---
+
 ## Sources
 
 | Dataset | Coverage | Use in this project |
