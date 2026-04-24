@@ -47,7 +47,7 @@ This is the main analytical dataset, produced by merging Polity5, V-Dem, WBL, an
 
 ISO 3166-1 only assigns codes to currently existing countries, while Polity5 and V-Dem track historical and now-defunct polities. To produce a consistent panel, historical entities were mapped to a current ISO3 as follows:
 
-**Unifications** - the unified successor's post-unification series is replicated once per predecessor, each replica carrying that predecessor's ccode. Combined with the predecessor's own pre-unification data, every predecessor gets a complete continuous series — with `curr_iso3` set to the successor for all rows:
+**Unifications** - the unified successor's post-unification series is replicated once per predecessor, each replica carrying that predecessor's ccode. Combined with the predecessor's own pre-unification data, every predecessor gets a complete continuous series - with `curr_iso3` set to the successor for all rows:
 
 | Predecessors | Unified state | Year |
 |---|---|---|
@@ -368,3 +368,42 @@ The two methods rank WBL targets differently because they capture different phen
 | Why | Captures global democratisation waves (temporal co-movement) | Year fixed effects absorb global waves; detects within-country policy response |
 
 Together they give a complete picture: **democracy drives WBL improvements across both long historical waves (Granger) and within individual countries' own political cycles (FE)**.
+
+---
+
+## Results: Difference-in-Differences with Event Study
+
+### Methodology
+
+The DiD event study tests whether WBL outcomes shift specifically around the year a country undergoes a democratic transition, compared to countries that never transitioned. The treatment is defined as the first year where Polity2 crosses from ≤ 0 to > 0 with a jump of at least 3 points, falling between 1976 and 2013 (to allow 5 years of data on both sides). 93 transitions are identified under this definition.
+
+**Important limitation:** this design treats all democratic transitions as equivalent events. A country jumping from −7 to +6 on the Polity2 scale is counted the same as one moving from −1 to +2. The underlying variable is a continuous 21-point scale (−10 to +10), and the binary threshold crossing discards information about transition magnitude and durability.
+
+### Pre-transition pattern: WBL declines into the transition year
+
+The pre-period coefficients for the WBL Index are all statistically significant and follow a consistent downward pattern toward t = −1:
+
+| Event time | Coefficient | p-value |
+|---|---|---|
+| t = −5 | +0.011 | 0.001 *** |
+| t = −4 | +0.009 | 0.001 *** |
+| t = −3 | +0.006 | 0.009 *** |
+| t = −2 | +0.003 | 0.034 ** |
+| t = −1 | 0 (reference) | — |
+
+Countries that went on to democratize had slightly higher WBL scores years before the transition, but that advantage eroded steadily into the transition year. This is consistent with authoritarian regimes tightening restrictions on rights in the years before collapse — a pattern visible across Latin American military dictatorships and Eastern European communist regimes.
+
+This pre-trend also means the parallel trends assumption is violated for most sub-indices, which limits the causal interpretation of the post-period estimates.
+
+### Post-transition effects: Workplace and Pension
+
+The post-period coefficients are near zero and not statistically significant for most sub-indices within the ±5 year window. Two exceptions pass the parallel trends check (no significant pre-period drift):
+
+- **Workplace**: average post-transition coefficient +0.016, directionally positive and consistent with the Panel FE results. Workplace protections — anti-discrimination laws, sexual harassment legislation — are among the first legislative priorities of new democratic governments.
+- **Pension**: pre-trends are flat, but the post-transition effect is also flat (avg ≈ 0.000). Pension law appears structurally unresponsive to regime transitions within a 5-year window, consistent with both the Granger and FE findings.
+
+### Why this doesn't contradict the Granger and FE results
+
+The flat post-transition result does not mean democracy has no effect on WBL. The Granger and FE methods capture **continuous gradual democratization** — ongoing changes in civil society participation, female legislative representation, and rule of law over many years. The DiD captures a **discrete threshold event** — the year polity2 first crosses zero.
+
+These are different questions. The evidence from all three methods points to the same conclusion: democracy and WBL improve together, but the mechanism is slow and cumulative, not triggered by a single transition event. WBL improvements build over years of sustained democratic governance rather than jumping at the moment a regime formally crosses a numeric threshold.
