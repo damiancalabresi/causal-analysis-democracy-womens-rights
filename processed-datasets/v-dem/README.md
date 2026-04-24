@@ -1,4 +1,4 @@
-# V-Dem — Processed Dataset
+# V-Dem - Processed Dataset
 
 **Source:** Varieties of Democracy (V-Dem) Project, version 16
 **Original file:** `V-Dem-CY-Core-v16.csv` (country-year, core variables)

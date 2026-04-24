@@ -58,24 +58,24 @@ def arr(ax, x1, y1, x2, y2, color="#444", lw=1.8, ls="-", alpha=0.75,
 # NODES
 # ══════════════════════════════════════════════════════════════════════════════
 
-# Col 1 — Confounders (x=1.9)
+# Col 1 - Confounders (x=1.9)
 node(ax, 1.9, 12.5, "GDP per capita",   C_CONF, w=2.6, fs=8.5)
 node(ax, 1.9, 10.8, "Fertility Rate",   C_CONF, w=2.6, fs=8.5)
 node(ax, 1.9,  8.8, "Religion\n(Islam ↓ WBL)", C_CONF, w=2.6, h=0.72, fs=8.2)
 
-# Col 2 — Political / Institutional Drivers (x=5.8)
+# Col 2 - Political / Institutional Drivers (x=5.8)
 node(ax, 5.8, 13.5, "Democracy\n(Polity2 / V-Dem)", C_INPUT, w=3.1, h=0.80, fs=9)
 node(ax, 5.8, 11.0, "Civil Society\n(v2x_cspart)",  C_CIVIL, w=3.1, h=0.75, fs=9)
 node(ax, 5.8,  8.1, "Women's Rights\nGroups\n(v2csgender)", C_WOMEN, w=3.1, h=0.95, fs=8.5)
 # Interaction
 node(ax, 5.8,  9.6, "Demo × CSO\nComplementarity",  C_INT,   w=3.0, h=0.72, fs=8.5)
 
-# Col 3 — Mediators (x=10.5)
+# Col 3 - Mediators (x=10.5)
 node(ax, 10.5, 13.5, "Female Legislators\n(v2lgfemleg)",          C_MED, w=3.0, h=0.75, fs=8.5)
 node(ax, 10.5, 11.3, "Women Political\nEmpowerment\n(v2x_gender)", C_MED, w=3.0, h=0.95, fs=8.5)
 node(ax, 10.5,  8.8, "Women Civil Society\n(v2x_gencs)",           C_MED, w=3.0, h=0.75, fs=8.5)
 
-# Col 4 — WBL Outcomes (x=16.2)
+# Col 4 - WBL Outcomes (x=16.2)
 node(ax, 16.2, 13.6, "Mobility",      C_REST, w=2.4, fs=9)
 node(ax, 16.2, 12.4, "Assets",        C_REST, w=2.4, fs=9)
 node(ax, 16.2, 11.2, "Marriage",      C_REST, w=2.4, fs=9)
@@ -85,7 +85,7 @@ node(ax, 16.2,  7.2, "Entrepren.",    C_ECON, w=2.4, fs=9)
 node(ax, 16.2,  5.5, "Parenthood",    C_PROV, w=2.4, fs=9)
 node(ax, 16.2,  4.3, "Pension",       C_PROV, w=2.4, fs=9)
 
-# Col 5 — WBL Index (x=20.3)
+# Col 5 - WBL Index (x=20.3)
 node(ax, 20.3, 9.0, "WBL\nIndex", C_WBL, w=2.3, h=0.8, fs=10)
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -143,7 +143,7 @@ arr(ax, 7.36, 11.1, 15.0, 8.4,  color=C_CIVIL, lw=2.1, alpha=0.80, rad=-0.02)  #
 arr(ax, 7.36, 11.0, 15.0, 7.2,  color=C_CIVIL, lw=2.1, alpha=0.80)             # Entrepren.
 # Borderline at lag 4 (p≈0.05), dashed
 arr(ax, 7.36, 11.3, 15.0, 12.4, color=C_CIVIL, lw=1.0, alpha=0.50, ls="--", rad=0.04)
-# n.s.: Mobility, Marriage, Parenthood, Pension — omitted
+# n.s.: Mobility, Marriage, Parenthood, Pension - omitted
 
 # ── Women's Rights Groups → WBL (direct) ──────────────────────────────────────
 # Restrictions (strongest)

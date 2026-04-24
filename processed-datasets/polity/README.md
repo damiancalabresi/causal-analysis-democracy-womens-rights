@@ -1,4 +1,4 @@
-# Polity5 — Processed Dataset
+# Polity5 - Processed Dataset
 
 **Source:** Polity5 Project, Center for Systemic Peace
 **Original file:** `p5v2018.xls` (dataset version 2018)
@@ -42,13 +42,13 @@ Several variables use special numeric codes instead of regular scores when norma
 |--------|-------|-------------|
 | `polity2` | −10 to +10 | **Revised Combined Polity Score.** The primary summary measure. Computed as `democ − autoc`, with standardized authority codes converted: −66 → missing; −77 → 0; −88 → prorated linearly across the transition span. **Use this column for regression and time-series analysis.** Regimes are conventionally classified as: full democracy (+6 to +10), partial democracy/anocracy (−5 to +5), autocracy (−10 to −6). |
 | `democ` | 0–10 (or −66/−77/−88) | **Institutionalized Democracy index.** Additive score derived from executive recruitment competitiveness (`exrec`), executive constraints (`exconst`), and political competition (`polcomp`). Higher = more democratic. |
-| `autoc` | 0–10 (or −66/−77/−88) | **Institutionalized Autocracy index.** Additive score derived from the same component variables with different weights. Higher = more autocratic. Note: `democ` and `autoc` are not mutually exclusive — a regime can score on both (anocracy). |
+| `autoc` | 0–10 (or −66/−77/−88) | **Institutionalized Autocracy index.** Additive score derived from the same component variables with different weights. Higher = more autocratic. Note: `democ` and `autoc` are not mutually exclusive - a regime can score on both (anocracy). |
 
 ### Concept Variables (Authority Typologies)
 
 These are composite re-codings of the underlying component variables that capture authority typologies as discrete categories.
 
-#### `exrec` — Executive Recruitment Concept
+#### `exrec` - Executive Recruitment Concept
 Range: 1–8 (or −66/−77/−88)
 
 Synthesizes how the chief executive comes to power (`xrreg`, `xrcomp`, `xropen`) into eight ordered categories:
@@ -64,7 +64,7 @@ Synthesizes how the chief executive comes to power (`xrreg`, `xrcomp`, `xropen`)
 | 7 | Transitional or Restricted Election | Elections with significant restrictions or incumbent advantages |
 | 8 | Competitive Election | Open competitive elections; power transfers follow electoral results |
 
-#### `exconst` — Executive Constraints Concept
+#### `exconst` - Executive Constraints Concept
 Range: 1–7 (or −66/−77/−88)
 
 Extent to which accountability groups (legislature, ruling party, military, judiciary) institutionally constrain the chief executive's decision-making:
@@ -79,7 +79,7 @@ Extent to which accountability groups (legislature, ruling party, military, judi
 | 6 | Intermediate |
 | 7 | Executive parity or subordination |
 
-#### `polcomp` — Political Competition Concept
+#### `polcomp` - Political Competition Concept
 Range: 1–10 (or −66/−77/−88)
 
 Synthesizes the regulation (`parreg`) and competitiveness (`parcomp`) of political participation into ten ordered categories:
@@ -111,15 +111,15 @@ Populated only in years when a regime change occurs; blank otherwise.
 
 | Value | Label |
 |-------|-------|
-| +3 | Major Democratic Transition — ≥6-point increase in `polity`, crossing into partial or full democracy |
-| +2 | Minor Democratic Transition — 3–5-point increase crossing a regime boundary |
-| +1 | Positive Regime Change — ≥3-point increase without a regime-type shift |
+| +3 | Major Democratic Transition - ≥6-point increase in `polity`, crossing into partial or full democracy |
+| +2 | Minor Democratic Transition - 3–5-point increase crossing a regime boundary |
+| +1 | Positive Regime Change - ≥3-point increase without a regime-type shift |
 | 0 | Little or No Change |
-| −1 | Negative Regime Change — 3–5-point decrease |
-| −2 | Adverse Regime Transition — ≥6-point decrease, or interregnum (−77) |
-| −77 | State Failure — complete collapse of central political authority |
-| −66 | Interruption — foreign occupation or short-lived federation |
-| 96 | State Disintegration — territorial breakup producing successor states |
-| 97 | State Transformation — borders substantially changed; authority regime continuous |
-| 98 | State Demise — voluntary dissolution or absorption into another state |
-| 99 | State Creation — year of independence or formation |
+| −1 | Negative Regime Change - 3–5-point decrease |
+| −2 | Adverse Regime Transition - ≥6-point decrease, or interregnum (−77) |
+| −77 | State Failure - complete collapse of central political authority |
+| −66 | Interruption - foreign occupation or short-lived federation |
+| 96 | State Disintegration - territorial breakup producing successor states |
+| 97 | State Transformation - borders substantially changed; authority regime continuous |
+| 98 | State Demise - voluntary dissolution or absorption into another state |
+| 99 | State Creation - year of independence or formation |

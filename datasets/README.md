@@ -34,7 +34,7 @@ Raw source datasets used in this project. Processed/cleaned versions are in `../
 | `exrec` | 1–8 | Executive Recruitment Concept (how the chief executive comes to power) |
 | `exconst` | 1–7 | Executive Constraints Concept (limits on executive authority) |
 | `polcomp` | 1–10 | Political Competition Concept (regulation and competitiveness of participation) |
-| `regtrans` | — | Regime Transition Category (populated only in transition years) |
+| `regtrans` | - | Regime Transition Category (populated only in transition years) |
 
 Special authority codes `−66` (interruption), `−77` (interregnum), `−88` (transition) replace numeric scores when normal coding is not applicable. `polity2` converts these to usable values and should be preferred for quantitative analysis.
 

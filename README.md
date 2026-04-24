@@ -2,7 +2,7 @@
 
 ## About
 
-This project uses historical panel data to investigate whether changes in a country's level of democracy and civil liberties causally precede improvements in women's legal rights, or whether the relationship runs in the opposite direction — or both.
+This project uses historical panel data to investigate whether changes in a country's level of democracy and civil liberties causally precede improvements in women's legal rights, or whether the relationship runs in the opposite direction - or both.
 
 The primary analytical tool is Granger causality testing applied country-by-country across a 48-year panel (1971–2018, 174 countries). Democracy and civil liberties variables from Polity5 and V-Dem are tested as predictors of women's legal rights from the World Bank's Women, Business and the Law (WBL) dataset, and the reverse direction is tested as well. The asymmetry between the two directions provides evidence about the likely causal ordering.
 
@@ -39,15 +39,15 @@ Processed/cleaned versions: [`processed-datasets/`](processed-datasets/)
 
 **File:** `processed-datasets/merged/democracy_wbl_rdi.csv`
 
-**8,561 rows × 101 columns** — 174 countries, years 1971–2018.
+**8,561 rows × 101 columns** - 174 countries, years 1971–2018.
 
-This is the main analytical dataset, produced by merging Polity5, V-Dem, WBL, and the Pew RDI into a single country-year panel. The merge key is `curr_iso3` — the ISO 3166-1 alpha-3 code of the current (or principal successor) state.
+This is the main analytical dataset, produced by merging Polity5, V-Dem, WBL, and the Pew RDI into a single country-year panel. The merge key is `curr_iso3` - the ISO 3166-1 alpha-3 code of the current (or principal successor) state.
 
 ### Country Continuity: Handling Dissolutions, Unifications, and Secessions
 
 ISO 3166-1 only assigns codes to currently existing countries, while Polity5 and V-Dem track historical and now-defunct polities. To produce a consistent panel, historical entities were mapped to a current ISO3 as follows:
 
-**Unifications** — both predecessor series are extended into the unified successor:
+**Unifications** - the unified successor's post-unification series is replicated once per predecessor, each replica carrying that predecessor's ccode. Combined with the predecessor's own pre-unification data, every predecessor gets a complete continuous series — with `curr_iso3` set to the successor for all rows:
 
 | Predecessors | Unified state | Year |
 |---|---|---|
@@ -55,18 +55,14 @@ ISO 3166-1 only assigns codes to currently existing countries, while Polity5 and
 | Vietnam North + South Vietnam | Vietnam (VNM) | 1976 |
 | Yemen North + Yemen South | Yemen (YEM) | 1990 |
 
-**Dissolutions** — mapped to the principal successor state:
+**Dissolutions** - the predecessor's full historical series is replicated once per successor, each replica labeled with that successor's ISO3. This gives every successor a complete series that includes the predecessor's pre-dissolution observations followed by its own post-independence observations:
 
-| Historical polity | Mapped to | Other successors (tracked separately) |
-|---|---|---|
-| USSR | Russia (RUS) | 14 independent republics |
-| Yugoslavia | Serbia (SRB) | Slovenia, Croatia, Bosnia, Macedonia, Montenegro |
-| Czechoslovakia | Czech Republic (CZE) | Slovakia (SVK) |
-| Serbia and Montenegro | Serbia (SRB) | Montenegro (MNE) |
-
-**Secessions and new states** — tracked from independence under their own ISO3:
-
-Bosnia (BIH), Macedonia (MKD), Timor-Leste (TLS), Sudan-North (SDN), and others.
+| Historical polity | Successors (each gets a full replicated series) |
+|---|---|
+| USSR | Russia (RUS), + 14 independent republics |
+| Yugoslavia | Serbia (SRB), Slovenia (SVN), Croatia (HRV), Bosnia (BIH), Macedonia (MKD), Montenegro (MNE) |
+| Czechoslovakia | Czech Republic (CZE), Slovakia (SVK) |
+| Serbia and Montenegro | Serbia (SRB), Montenegro (MNE) |
 
 As a result, a time series for (for example) Serbia covers Yugoslavia's pre-dissolution observations and Serbia's post-independence observations as a single continuous series under `curr_iso3 = SRB`.
 
@@ -88,7 +84,7 @@ As a result, a time series for (for example) Serbia covers Yugoslavia's pre-diss
 
 Democracy/autocracy scores from the [Polity5 project](https://www.systemicpeace.org/polityproject.html).
 
-> **Special codes:** Several Polity5 fields use the values −88 (transition/interregnum period — no coherent authority), −77 (interruption — foreign interruption of governance), and −66 (periods of interregnum) as missing-data indicators rather than numeric scores. These should be treated as NaN in analysis. `p_regtrans` uses 99 for interregnum and −77/−66 for interruption/interregnum codes.
+> **Special codes:** Several Polity5 fields use the values −88 (transition/interregnum period - no coherent authority), −77 (interruption - foreign interruption of governance), and −66 (periods of interregnum) as missing-data indicators rather than numeric scores. These should be treated as NaN in analysis. `p_regtrans` uses 99 for interregnum and −77/−66 for interruption/interregnum codes.
 
 | Field | Description | Range / Values |
 |---|---|---|
@@ -133,7 +129,7 @@ All indices below are on a **0–1 scale** (higher = more democratic / more cons
 
 #### Gender-Specific Indices
 
-Indices marked **0–1** follow the standard V-Dem scale. Indices marked **z-score** are latent variable estimates on an interval scale centered near 0 — higher values indicate better conditions for women, lower values indicate worse.
+Indices marked **0–1** follow the standard V-Dem scale. Indices marked **z-score** are latent variable estimates on an interval scale centered near 0 - higher values indicate better conditions for women, lower values indicate worse.
 
 | Field | Description | Scale | Observed Range |
 |---|---|---|---|
@@ -173,7 +169,7 @@ Each sub-index is the average of its constituent binary indicators × 100. Highe
 
 | Field | Description | Observed Range |
 |---|---|---|
-| `wbl_index` | Overall WBL index — average of the 8 sub-indices below | 17.5–100 |
+| `wbl_index` | Overall WBL index - average of the 8 sub-indices below | 17.5–100 |
 | `mobility` | Mobility sub-index | 0–100 |
 | `workplace` | Workplace sub-index | 0–100 |
 | `pay` | Pay sub-index | 0–100 |
@@ -271,7 +267,7 @@ From the [Pew Research Center Global Religious Diversity](https://www.pewresearc
 
 | Field | Description | Range / Values |
 |---|---|---|
-| `rdi` | Religious Diversity Index — higher values indicate greater diversity in religious composition | 0–9 (theoretical max: 10; observed max in dataset: 9) |
+| `rdi` | Religious Diversity Index - higher values indicate greater diversity in religious composition | 0–9 (theoretical max: 10; observed max in dataset: 9) |
 | `dominant_religion` | The largest religious group in the country | `christian`, `muslim`, `unaffiliated`, `hindu`, `buddhist`, `folk`, `jewish` |
 
 ---
@@ -280,7 +276,9 @@ From the [Pew Research Center Global Religious Diversity](https://www.pewresearc
 
 ### Methodology
 
-Granger causality tests were run country-by-country using `statsmodels.tsa.stattools.grangercausalitytests`. Both series are **first-differenced** before testing to address the non-stationarity common to trending panel indices. Lags 1–4 years are tested; each country-pair's result is summarized by the minimum p-value across lags. Country-pairs with fewer than 20 usable observations are excluded.
+Granger causality tests were run country-by-country using `statsmodels.tsa.stattools.grangercausalitytests`. Both series are **first-differenced** before testing to address the non-stationarity common to panel indices with on-going trends. Lags of 1–4 years are tested; each country-pair's result is summarized by the minimum p-value across lags. Country-pairs with fewer than 20 usable observations are excluded.
+
+**Note:** Each time series is identified by a country-pair (`ccode_ISO3`) rather than a single country code, because unifications and dissolutions produce multiple series sharing the same `curr_iso3`.
 
 Results are aggregated across countries in two ways: the **% of countries** where the test is significant at p < 0.05 (share of countries showing the pattern), and **Fisher's combined p-value** (pooled evidence across all countries).
 
@@ -306,7 +304,7 @@ The strongest forward signals are for **Pension** and **Parenthood** (liberal de
 
 ### Reverse Direction: Women's Legal Rights → Democracy / Civil Liberties
 
-The same tests were run in reverse — testing whether past changes in WBL sub-indices predict future changes in democracy or civil liberties.
+The same tests were run in reverse - testing whether past changes in WBL sub-indices predict future changes in democracy or civil liberties.
 
 | WBL Predictor | Mean % sig | Max % sig | Strongest democracy target |
 |---|---|---|---|
@@ -322,4 +320,51 @@ The same tests were run in reverse — testing whether past changes in WBL sub-i
 
 The reverse signals are **consistently weaker** than the forward direction. Across all WBL sub-indices, the mean % of countries significant in the reverse direction ranges from 9.8% to 17.1%, compared to 15.2%–29.6% in the forward direction. This asymmetry supports the interpretation that democracy and civil liberties changes tend to **precede** improvements in women's legal rights, rather than the reverse.
 
-The aggregate WBL index shows a mean of 13.8% reverse significance vs. 20.1% forward — a roughly 1.5× gap. Individual sub-indices follow the same pattern, with **Workplace** being the area of most extreme asymmetry (9.8% reverse vs. 17.3% forward).
+The aggregate WBL index shows a mean of 13.8% reverse significance vs. 20.1% forward - a roughly 1.5× gap. Individual sub-indices follow the same pattern, with **Workplace** being the area of most extreme asymmetry (9.8% reverse vs. 17.3% forward).
+
+---
+
+## Results: Panel Fixed Effects Regression
+
+### Methodology
+
+Panel Fixed Effects (FE) regressions were run for all combinations of 10 predictors × 9 WBL targets × 4 lags (1–4 years), yielding 360 regressions per direction. Each regression includes country fixed effects (absorbing stable country characteristics) and year fixed effects (absorbing global time trends). Both the predictor and target are first-differenced to focus on within-country changes.
+
+The 10 predictors are: Polity2, Electoral Democracy, Liberal Democracy, Freedom of Association, Freedom of Expression, Rule of Law (the 6 core democracy/civil liberties indices) plus Civil Society, Female Legislators, Women Political Empowerment, and Women Civil Society.
+
+### Forward Direction: Democracy / Civil Liberties → Women's Legal Rights
+
+**62.2% of forward regressions are significant at p < 0.05**, with all coefficients among the top 20 being positive. Results at lag 4, averaged across all 10 predictors:
+
+| WBL Target | Mean coef | % Significant | Strongest predictor |
+|---|---|---|---|
+| Workplace | 0.237 | 100% | Female Legislators |
+| Pay | 0.205 | 90% | Female Legislators |
+| Entrepreneurship | 0.181 | 100% | Female Legislators |
+| WBL Index | 0.130 | 100% | Women Political Empow. |
+| Assets | 0.131 | 50% | Female Legislators |
+| Marriage | 0.123 | 60% | Female Legislators |
+| Parenthood | 0.081 | 40% | Women Political Empow. |
+| Mobility | 0.062 | 40% | Female Legislators |
+| Pension | 0.017 | 10% | - |
+
+**Female Legislators is the single strongest predictor overall**: a 10 percentage point increase in women's share of parliament predicts a 3.8 pp improvement in marriage law rights the following year (coef = 0.380, t = 6.73).
+
+### Reverse Direction: Women's Legal Rights → Democracy / Civil Liberties
+
+**40.3% of reverse regressions are significant**, compared to 62.2% forward - confirming the asymmetry found in the Granger analysis. Key contrasts:
+
+- **Workplace: 100% forward, 10% reverse** - the clearest one-directional result.
+- **Pay/Entrepreneurship: 90-100% forward, ~60% reverse** - a genuine virtuous cycle, but with the forward channel dominant.
+- **Pension: 10% forward, 0% reverse** - structurally inert in both directions.
+
+### Granger vs Panel FE: Complementary Pictures
+
+The two methods rank WBL targets differently because they capture different phenomena:
+
+| | Granger top targets | FE top targets |
+|---|---|---|
+| Forward | Parenthood, Mobility, Pension | Workplace, Pay, Entrepreneurship |
+| Why | Captures global democratisation waves (temporal co-movement) | Year fixed effects absorb global waves; detects within-country policy response |
+
+Together they give a complete picture: **democracy drives WBL improvements across both long historical waves (Granger) and within individual countries' own political cycles (FE)**.

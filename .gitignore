@@ -1,4 +1,5 @@
 .DS_Store
+CLAUDE.md
 .ipynb_checkpoints/
 datasets/pew-research-center/Religious_Composition_by_Country_2010-2050.xlsx
 datasets/polity/p5v2018.xls

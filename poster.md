@@ -2,7 +2,7 @@
 
 The Artificial Intelligence Interdisciplinary Institute at Maryland (AIM) invites poster submissions for the Inaugural AIM Research Symposium, a campus-wide convening that highlights interdisciplinary research and course innovation advancing artificial intelligence in service of people and society.
 
-This symposium reflects AIM’s vision to unite disciplines to build a world where AI uplifts people and society. The Poster & Exhibits showcase is the central research ecosystem of the day — designed as a dynamic, high-engagement environment that fosters dialogue, collaboration, and intellectual cross-pollination.
+This symposium reflects AIM’s vision to unite disciplines to build a world where AI uplifts people and society. The Poster & Exhibits showcase is the central research ecosystem of the day - designed as a dynamic, high-engagement environment that fosters dialogue, collaboration, and intellectual cross-pollination.
 
 ## Why Participate?
 

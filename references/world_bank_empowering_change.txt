@@ -386,31 +386,31 @@ statistics for the subset of 190 economies with data available for all variables
 Assessing what explains the variation in gendered laws, we provide baseline estimations based
 on a fixed-effects panel regression model as follows:
 
-              í µí±Ší µí±Ší µí±Ší µí±Ší µí±Ší µí±Šâ€ˆí µí±˜í µí±˜,í µí±¡í µí±¡ = â€ˆí µí»¼í µí»¼ + â€ˆí µí»½í µí»½ âˆ— â€ˆí µí°·í µí°·í µí°·í µí°·í µí°·í µí°·í µí°·í µí°·í µí°·í µí°·í µí°·í µí°·â€ˆí µí±œí µí±œí µí±œí µí±œâ€ˆí µí±–í µí±–í µí±–í µí±–í µí±–í µí±–í µí±–í µí±–í µí±–í µí±–í µí±–í µí±–í µí±–í µí±–í µí±¡í µí±¡í µí±˜í µí±˜,í µí±¡í µí±¡ + â€ˆâ€ˆí µí»¿í µí»¿ âˆ— í µí°¶í µí°¶í µí°¶í µí°¶í µí°¶í µí°¶í µí°¶í µí°¶í µí°¶í µí°¶í µí°¶í µí°¶í µí°¶í µí°¶í µí± í µí± í µí±˜í µí±˜,í µí±¡í µí±¡ + â€ˆâˆ…í µí±¡í µí±¡ â€ˆ + â€ˆí µí»¾í µí»¾í µí±˜í µí±˜ â€ˆ + â€ˆí µí¼€í µí¼€í µí±˜í µí±˜,í µí±¡í µí±¡
+              ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â€ˆï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ = â€ˆï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ + â€ˆï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ âˆ— â€ˆï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â€ˆï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â€ˆï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ + â€ˆâ€ˆï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ âˆ— ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ + â€ˆâˆ…ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ â€ˆ + â€ˆï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ â€ˆ + â€ˆï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 WBL represents the WBL index measuring womenâ€™s legal rights or its composite indicators
 that capture legal rights in eight related areas: Mobility, Workplace, Pay, Marriage, Parenthood,
-Entrepreneurship, Assets, and Pension for country k at year t; The í µí°·í µí°·í µí±Ÿí µí±Ÿí µí±–í µí±–í µí±–í µí±–í µí±–í µí±–í µí±–í µí±– í µí±œí µí±œí µí±œí µí±œ í µí±–í µí±–í µí±–í µí±–í µí±–í µí±–í µí±–í µí±–í µí±–í µí±–í µí±–í µí±–í µí±–í µí±–í µí±–í µí±– variable
+Entrepreneurship, Assets, and Pension for country k at year t; The ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ variable
 includes a countryâ€™s political economy as well as variables measuring how active a countryâ€™s
-civil society or womenâ€™s rights groups are. í µí°¶í µí°¶í µí°¶í µí°¶í µí°¶í µí°¶í µí°¶í µí°¶í µí°¶í µí°¶í µí°¶í µí°¶í µí°¶í µí°¶í µí°¶í µí°¶í µí±˜í µí±˜,í µí±¡í µí±¡ includes í µí°ºí µí°ºí µí°ºí µí°ºí µí°ºí µí°º í µí±í µí±í µí±í µí±í µí±í µí± í µí°¶í µí°¶í µí°¶í µí°¶í µí°¶í µí°¶í µí°¶í µí°¶í µí°¶í µí°¶í µí°¶í µí°¶í µí±˜í µí±˜,í µí±¡í µí±¡ capturing
+civil society or womenâ€™s rights groups are. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ includes ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ capturing
 a countryâ€™s level of development that may affect gender legal equality as suggested by Tertilt
 et al. (2022), and also may be correlated with the explanatory variables of interest. Similarly,
 
                                                                                                                                                                                                                                      8
-we control for fertility rate (í µí°¹í µí°¹í µí°¹í µí°¹í µí°¹í µí°¹í µí°¹í µí°¹í µí°¹í µí°¹í µí°¹í µí°¹í µí°¹í µí°¹í µí°¹í µí°¹í µí°¹í µí°¹í µí±˜í µí±˜,í µí±¡í µí±¡ ) to capture the channel that Doepke and Tertilt (2009)
+we control for fertility rate (ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ) to capture the channel that Doepke and Tertilt (2009)
 and Tertilt et al. (2022) coined as â€˜parental altruismâ€™. According to the authors, political
 preferences of parents for gender equality can be influenced by the fertility rate. Preferences
 may change to safeguard equality for their daughters, as well as to ensure better overall
 outcomes for their children as greater rights for women may lead to more investments in
 childrenâ€™s human capital. However, the authors note that the strength of this channel will
-depend upon the returns to human capital. Finally, we control for í µí°ºí µí°ºí µí°ºí µí°ºí µí°ºí µí°º í µí°ºí µí°ºí µí°ºí µí°ºí µí°ºí µí°ºí µí°ºí µí°ºí µí°ºí µí°ºâ„í µí±˜í µí±˜,í µí±¡í µí±¡ (Adascalitei
-and Pignatti Morano 2016). The term âˆ…í µí±¡í µí±¡ represents year fixed effects to capture time-specific
-shocks, and country-level fixed effects í µí»¾í µí»¾í µí±˜í µí±˜ to control for country characteristics. Standard
-errors are clustered at the country level, following Abadie et al. (2023). The coefficient í µí»½í µí»½ is the
+depend upon the returns to human capital. Finally, we control for ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â„ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ (Adascalitei
+and Pignatti Morano 2016). The term âˆ…ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ represents year fixed effects to capture time-specific
+shocks, and country-level fixed effects ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ to control for country characteristics. Standard
+errors are clustered at the country level, following Abadie et al. (2023). The coefficient ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ is the
 main coefficient of interest denoting the relationship between the potential drivers of reform
 and the WBL index. All explanatory variables are centered and standardized 3 to allow for
 magnitude comparison. Moreover, we lagged explanatory variables by three years to minimize
-potential endogeneity caused by reverse causality. The error term is í µí¼€í µí¼€í µí±˜í µí±˜,í µí±¡í µí±¡ . The following sections
+potential endogeneity caused by reverse causality. The error term is ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ . The following sections
 describe the data of these variables in more detail.
 
 3.2 Dependent Variable: Gendered Laws
@@ -712,8 +712,8 @@ such as the right to maternity leave. Specifically, womenâ€™s rights groups seem
 important in pushing the needle in this direction.
 
                                                                                                 16
-Having established that democracy and an active civil societyâ€”especially one in which women
-play a prominent roleâ€”are independently correlated, we go on to assess the interplay of
+Having established that democracy and an active civil society-especially one in which women
+play a prominent role-are independently correlated, we go on to assess the interplay of
 democracy and civil society organizations by estimating models with an interaction effect
 (Table 6). The first model assesses the interaction between womenâ€™s involvement in CSOs and
 the level of democracy (WCS x Polity). The results reveal a statistically significant positive
@@ -806,8 +806,8 @@ We rerun our analysis using CS without Women CSO as explanatory variable of inte
 Table 12. Interestingly, we find that civil society participation is still positively related to
 gender equality in law. The persistence of this positive correlation suggests that the mechanisms
 through which civil society influences gender equality in law are multifaceted. It indicates that
-broad-based civil society engagementâ€”encompassing advocacy, lobbying, public campaigns,
-and awareness-raising activitiesâ€”plays a crucial role in shaping legal reforms. This
+broad-based civil society engagement-encompassing advocacy, lobbying, public campaigns,
+and awareness-raising activities-plays a crucial role in shaping legal reforms. This
 engagement facilitates a conducive environment for policy change by increasing public
 discourse on gender equality, pressuring policy makers, and contributing to a societal consensus
 on the importance of legal reforms.
@@ -1019,7 +1019,7 @@ Islam, Asif, Silvia Muzi, and Mohammad Amin. 2019. â€œUnequal Laws and the Disem
 Kenney, Sally J. 2003. â€œWhere Is Gender in Agenda Setting?â€ Women & Politics 25(1â€“2): 179â€“
    207.
 Kubba, Laith. 2000. â€œThe Awakening of Civil Society.â€ Journal of Democracy 11(3):84-90.
-Lamont, MichÃ¨le. 2023. Seeing Others: How Recognition Worksâ€”and How It Can Heal a Divided
+Lamont, MichÃ¨le. 2023. Seeing Others: How Recognition Works-and How It Can Heal a Divided
    World. Simon and Schuster. New York.
 Law, David S., and Mila Versteeg. 2013. â€œSham Constitutions.â€ California Law Review 101(4):
    863-952.
@@ -1591,7 +1591,7 @@ Civil Society Participation   This variable reflects the level of engagement and
                               organizations and citizens in the decision-making processes of a country's
                               political system, from low to high (0-1). The index is a compositive measure of
                               four indicators:
-                              - Candidate selection â€” national/local: this variable captures the level of
+                              - Candidate selection - national/local: this variable captures the level of
                               centralization in the candidate selection process for legislative elections within
                               political parties at the national or central level. This variable assesses how
                               candidate selection is conducted, whether centralized or decentralized, can
