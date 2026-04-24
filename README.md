@@ -341,10 +341,10 @@ The 10 predictors are: Polity2, Electoral Democracy, Liberal Democracy, Freedom 
 | Workplace | 0.237 | 100% | Female Legislators |
 | Pay | 0.205 | 90% | Female Legislators |
 | Entrepreneurship | 0.181 | 100% | Female Legislators |
-| WBL Index | 0.130 | 100% | Women Political Empow. |
+| WBL Index | 0.130 | 100% | Women Political Empower |
 | Assets | 0.131 | 50% | Female Legislators |
 | Marriage | 0.123 | 60% | Female Legislators |
-| Parenthood | 0.081 | 40% | Women Political Empow. |
+| Parenthood | 0.081 | 40% | Women Political Empower |
 | Mobility | 0.062 | 40% | Female Legislators |
 | Pension | 0.017 | 10% | - |
 
