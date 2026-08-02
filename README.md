@@ -407,3 +407,7 @@ The post-period coefficients are near zero and not statistically significant for
 The flat post-transition result does not mean democracy has no effect on WBL. The Granger and FE methods capture **continuous gradual democratization** — ongoing changes in civil society participation, female legislative representation, and rule of law over many years. The DiD captures a **discrete threshold event** — the year polity2 first crosses zero.
 
 These are different questions. The evidence from all three methods points to the same conclusion: democracy and WBL improve together, but the mechanism is slow and cumulative, not triggered by a single transition event. WBL improvements build over years of sustained democratic governance rather than jumping at the moment a regime formally crosses a numeric threshold.
+
+---
+
+*Last updated: 2026-08-02.*
